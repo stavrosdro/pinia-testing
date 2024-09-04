@@ -10,7 +10,8 @@ export const useCounterStore = defineStore('counter', () => {
 
   function increment() {
     count.value++
-    logger('increment is called')
+    // logger('increment is called')
+    useCounterStore().logger('increment is called')
   }
 
   return { count, logger, increment }
